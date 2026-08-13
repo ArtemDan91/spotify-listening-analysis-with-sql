@@ -1,3 +1,3 @@
 # Spotify Listening Analysis
-![Spotify Logo](images/spotify-logo.png)
+![Spotify Logo](spotify-logo.png)
 ### SQL-based analysis of Spotify listening behavior
