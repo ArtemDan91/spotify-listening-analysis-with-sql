@@ -1,1 +1,2 @@
-# spotify-listening-analysis-with-sql
+# Spotify Listening Analysis
+### SQL-based analysis of Spotify listening behavior
