@@ -37,5 +37,32 @@ Each row represents a single listening event and contains information about the 
 | `shuffle` | Indicates whether Shuffle Mode was enabled |
 | `skipped` | Indicates whether the track was skipped |
 
+### SQL Analysis
+
+The analysis is divided into several sections:
+
+1. Basic Listening Overview
+2. Track & Artist Analysis
+3. Listening Behavior
+4. Advanced SQL Analysis
+5. SQL Query Optimization
+
+### Tools & Technologies
+
+- SQL
+- PostgreSQL
+- BigQuery
+- Power BI
+- GitHub
+- Excel
+
+### Power BI Dashboard
+
+The Spotify listening data is also explored in Power BI.
+
+[View Power BI Dashboard](https://app.powerbi.com/view?r=eyJrIjoiYjcyNzYwOGMtZDc0ZC00ZDZiLWE5NTEtY2E5NmQ1N2FhNDhhIiwidCI6IjllNjI3NDIxLTRkYTUtNGYxYi1hYTMxLThiNTRiZWJlYTE0NyJ9)
+
+### Key Findings
 
 
+### Project Structure
