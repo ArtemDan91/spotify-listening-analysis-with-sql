@@ -14,7 +14,7 @@ GROUP BY platform
 ORDER BY play_count DESC;
 
 
--- 2. Identify the tracks with the highest number of plays.
+-- 2. Find the tracks with the highest number of plays.
 
 SELECT 
 	track_name, 
@@ -42,7 +42,7 @@ SELECT
 FROM spotify_history;
 
 
--- 5. Count the total number of skipped plays.
+-- 5. Count the skipped plays.
 
 SELECT 
     COUNT(*) AS skipped_plays
@@ -50,7 +50,7 @@ FROM spotify_history
 WHERE skipped = TRUE;
 
 
--- 6. Analyze how listening activity varies across different years.
+-- 6. Analyze how listening activity varies by year.
 
 SELECT 
     EXTRACT(YEAR FROM ts) AS year,
