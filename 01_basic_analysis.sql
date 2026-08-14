@@ -4,7 +4,7 @@
 -- ============================================================
 
 
--- 1. Which platforms had the highest number of plays?
+-- 1. Analyze the number of plays across different platforms.
 
 SELECT 
     platform, 
@@ -14,7 +14,7 @@ GROUP BY platform
 ORDER BY play_count DESC;
 
 
--- 2. Which tracks had the highest play count?
+-- 2. Identify the tracks with the highest number of plays.
 
 SELECT 
 	track_name, 
@@ -25,7 +25,7 @@ Group BY track_name, artist_name
 ORDER BY play_count DESC;
 
 
--- 3. Which tracks were listened to for more than 1 minute?
+-- 3. Find tracks that were listened to for more than 1 minute.
 
 SELECT 
     DISTINCT track_name, 
@@ -35,14 +35,14 @@ WHERE ms_played > 60000
 ORDER BY artist_name;
 
 
--- 4. What was the average listening time per play?
+-- 4. Calculate the average listening time for a single play.
 
 SELECT 
     ROUND(AVG(ms_played) / 1000, 0) AS average_listening_seconds
 FROM spotify_history;
 
 
--- 5. How many plays were skipped?
+-- 5. Count the total number of skipped plays.
 
 SELECT 
     COUNT(*) AS skipped_plays
@@ -50,7 +50,7 @@ FROM spotify_history
 WHERE skipped = TRUE;
 
 
--- 6. How did listening activity vary by year?
+-- 6. Analyze how listening activity varies across different years.
 
 SELECT 
     EXTRACT(YEAR FROM ts) AS year,
@@ -60,7 +60,7 @@ GROUP BY year
 ORDER BY year DESC;
 
 
--- 7. Which day of the week had the highest listening activity?
+-- 7. Identify the day of the week with the highest listening activity.
 
 SELECT 
     TO_CHAR(ts, 'Day') AS day_of_week,
@@ -70,7 +70,7 @@ GROUP BY day_of_week
 ORDER BY play_count DESC;
 
 
--- 8. Which hour of the day had the highest listening activity?
+-- 8. Identify the hour of the day with the highest listening activity.
 
 SELECT 
     EXTRACT(HOUR FROM ts) AS hour,
