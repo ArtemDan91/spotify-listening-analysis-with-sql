@@ -121,3 +121,14 @@ FROM spotify_history
 GROUP BY platform
 HAVING COUNT(*) >= 1000
 ORDER BY avg_listening_minutes DESC;
+
+
+-- 10. Find the most common reason_start → reason_end combinations.
+
+SELECT
+    reason_start,
+    reason_end,
+    COUNT(*) AS reason_count
+FROM spotify_history
+GROUP BY reason_start, reason_end
+ORDER BY reason_count DESC;
