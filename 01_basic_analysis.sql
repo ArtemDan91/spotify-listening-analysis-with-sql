@@ -78,3 +78,13 @@ SELECT
 FROM spotify_history
 GROUP BY hour
 ORDER BY play_count DESC;
+
+
+-- 9. Find the first listening activity of each artist.
+
+SELECT
+    artist_name,
+    MIN(ts) AS first_listening
+FROM spotify_history
+GROUP BY artist_name
+ORDER BY first_listening;
