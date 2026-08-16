@@ -42,3 +42,24 @@ SELECT *
 FROM spotify_history
 WHERE artist_name = 'Imagine Dragons'
   AND track_name = 'Not Today';
+
+
+-- 5. Analyze query performance before indexing timestamp.
+
+EXPLAIN ANALYZE
+SELECT *
+FROM spotify_history
+WHERE ts >= '2024-01-01'
+AND ts < '2025-01-01';
+
+
+-- 6. Create an index on timestamp and analyze its impact.
+
+CREATE INDEX idx_spotify_ts
+ON spotify_history (ts);
+
+EXPLAIN ANALYZE
+SELECT *
+FROM spotify_history
+WHERE ts >= '2024-01-01'
+AND ts < '2025-01-01';
