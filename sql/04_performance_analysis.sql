@@ -63,3 +63,24 @@ SELECT *
 FROM spotify_history
 WHERE ts >= '2024-01-01'
 AND ts < '2025-01-01';
+
+
+-- 7. Analyze query performance with order by before indexing timestamp.
+
+EXPLAIN ANALYZE
+SELECT *
+FROM spotify_history
+ORDER BY ts DESC
+LIMIT 100;
+
+
+-- 8. Create an index on timestamp and analyze its impact.
+
+CREATE INDEX idx_spotify_ts
+ON spotify_history (ts);
+
+EXPLAIN ANALYZE
+SELECT *
+FROM spotify_history
+ORDER BY ts DESC
+LIMIT 100;
