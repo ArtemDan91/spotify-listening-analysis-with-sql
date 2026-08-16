@@ -12,13 +12,10 @@ FROM spotify_history
 WHERE artist_name = 'Imagine Dragons';
 
 
--- 2. Create a single-column index.
+-- 2. Create a single-column index and analyze its impact.
 
 CREATE INDEX idx_spotify_artist
 ON spotify_history (artist_name);
-
-
--- 3. Analyze query performance after indexing.
 
 EXPLAIN ANALYZE
 SELECT *
@@ -26,25 +23,22 @@ FROM spotify_history
 WHERE artist_name = 'Imagine Dragons';
 
 
--- 4. Analyze query performance before composite indexing.
+-- 3. Analyze query performance before composite indexing.
 
 EXPLAIN ANALYZE
 SELECT *
 FROM spotify_history
 WHERE artist_name = 'Imagine Dragons'
-AND track_name = 'Not Today';
+  AND track_name = 'Not Today';
 
 
--- 5. Create a composite index.
+-- 4. Create a composite index and analyze its impact.
 
 CREATE INDEX idx_spotify_artist_track
 ON spotify_history (artist_name, track_name);
 
-
--- 6. Analyze query performance after indexing.
-
 EXPLAIN ANALYZE
 SELECT *
 FROM spotify_history
 WHERE artist_name = 'Imagine Dragons'
-AND track_name = 'Not Today';
+  AND track_name = 'Not Today';
