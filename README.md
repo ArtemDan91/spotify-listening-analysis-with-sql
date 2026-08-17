@@ -6,7 +6,7 @@
 
 This project analyzes personal Spotify listening history to identify listening patterns, track and artist preferences, and user listening behavior.
 
-The analysis is performed using SQL, with Power BI used to visualize the results and create an interactive dashboard.
+The analysis is performed using PostgreSQL and BigQuery, with Power BI used to visualize the results and create an interactive dashboard.
 
 ### Objectives
 
@@ -162,7 +162,12 @@ spotify-listening-analysis-with-sql/
 │   └── 05_bigquery_optimization.sql
 │
 ├── screenshots/
-│   └── 04_performance_analysis/
+│   └── 04_postgresql_performance/
+│       ├── 01_artist_equals_before.png
+│       ├── 02_artist_like_before.png
+│       ├── 03_artist_lower_before.png
+│       ├── ...
+│       └── 22_timestamp_sort_after.png
 │
 ├── spotify-logo.png
 ├── spotify_history.csv
