@@ -202,12 +202,17 @@ spotify-listening-analysis-with-sql/
 │   └── 05_bigquery_optimization.sql
 │
 ├── screenshots/
-│   └── 04_postgresql_performance/
-│       ├── 01_artist_equals_before.png
-│       ├── 02_artist_like_before.png
-│       ├── 03_artist_lower_before.png
-│       ├── ...
-│       └── 22_timestamp_sort_after.png
+│   ├── 04_postgresql_optimization/
+│   │   ├── 01_artist_equals_before.png
+│   │   ├── 02_artist_like_before.png
+│   │   ├── 03_artist_lower_before.png
+│   │   ├── ...
+│   │   └── 22_timestamp_sort_after.png
+│   │
+│   └── 05_bigquery_optimization/
+│       ├── 01_before_partitioning.png
+│       ├── 02_partitioning.png
+│       └── 03_partitioning_clustering.png
 │
 ├── spotify-logo.png
 ├── spotify_history.csv
