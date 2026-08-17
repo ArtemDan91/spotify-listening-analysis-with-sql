@@ -39,13 +39,25 @@ Each row represents a single listening event and contains information about the 
 
 ### SQL Analysis
 
-The analysis is divided into several sections:
+The SQL analysis is divided into five sections, progressing from basic querying to advanced analysis and query optimization.
 
-1. Basic Listening Overview
-2. Track & Artist Analysis
-3. Listening Behavior
-4. Advanced SQL Analysis
-5. SQL Query Optimization
+#### 1. Basic SQL Analysis
+
+This section covers fundamental SQL queries used to explore the Spotify listening history.
+
+The analysis includes:
+
+- Listening activity across platforms
+- Most-played tracks
+- Tracks listened to for more than one minute
+- Average listening time
+- Skipped plays
+- Listening activity by year
+- Listening activity by day of week
+- Listening activity by hour
+- First listening activity for each artist
+
+[View SQL file](sql/01_basic_analysis.sql)
 
 ### Tools & Technologies
 
