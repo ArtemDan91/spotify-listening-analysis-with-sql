@@ -15,7 +15,7 @@ The analysis is performed using PostgreSQL and BigQuery, with Power BI used to v
 - Explore listening behavior and skip patterns
 - Analyze listening activity across different time periods
 - Apply SQL techniques to extract meaningful insights from the data
-- Explore query performance and SQL optimization
+- Explore query optimization and performance
 
 ### Dataset
 
@@ -128,8 +128,7 @@ The analysis compares query performance before and after applying partitioning a
 The tests cover:
 
 - Partitioning by date
-- Partitioning combined with clustering
-- Comparing query performance
+- Partitioning by date combined with clustering by 'platform'
 
 The comparisons focus on bytes processed, bytes billed, execution time, and slot milliseconds.
 
@@ -184,14 +183,11 @@ The Spotify listening data is also explored in Power BI.
 
 #### BigQuery Query Optimization
 
+- Date partitioning reduced data processed by over 90%, from 4.47 MB to 284.10 KB.
 
+- Adding clustering on `artist_name` further reduced data processed from 284.10 KB to 267.19 KB.
 
-
-
-
-
-
-
+- The small dataset size may explain why partitioning and clustering did not reduce execution time.
 
 ### Project Structure
 
@@ -202,7 +198,7 @@ spotify-listening-analysis-with-sql/
 │   ├── 01_basic_analysis.sql
 │   ├── 02_intermediate_analysis.sql
 │   ├── 03_advanced_analysis.sql
-│   ├── 04_postgresql_performance.sql
+│   ├── 04_postgresql_optimization.sql
 │   └── 05_bigquery_optimization.sql
 │
 ├── screenshots/
