@@ -96,7 +96,7 @@ SELECT
 FROM spotify_history
 GROUP BY track_name, artist_name
 HAVING COUNT(*) >= 50
-ORDER BY avg_listening_minutes DESC;
+ORDER BY avg_listening_minutes ASC;
 
 
 -- 8. Rank artists with at least 5 unique tracks by total listening time.
