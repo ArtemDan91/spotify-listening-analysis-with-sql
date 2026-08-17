@@ -148,6 +148,28 @@ The Spotify listening data is also explored in Power BI.
 
 ### Key Findings
 
+- The top 20% of artists account for 95.64% of all plays, showing a strong concentration of listening among a small group of artists.
+
+- The Beatles have the highest total listening time at 20,169.74 minutes, followed by The Killers (17,659.28 minutes) and John Mayer (12,086.99 minutes).
+
+- The top 10 most-played tracks account for only 1.04% of all plays, showing that listening is more diverse at the track level.
+
+- Android accounts for about 93% of all plays (139,821). Windows has the highest skip rate at 14.07%, compared with 5.18% on Android.
+
+- The average listening time is 128 seconds, while the overall skip rate is 5.25%.
+
+- Listening activity peaked in 2019 with 24,189 plays. The largest increase occurred in 2018 (+11,153 plays), while the largest decline occurred in 2020 (-12,316 plays).
+
+- "Ode To The Mets" by The Strokes is the most-played track with 207 plays and 1,123.86 minutes of total listening time.
+
+- Saturday is the most active day with 22,722 plays, while midnight is the most active hour with 10,884 plays.
+
+
+
+
+
+
+
 
 ### Project Structure
 
