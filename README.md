@@ -127,8 +127,8 @@ The analysis compares query performance before and after applying partitioning a
 
 The tests cover:
 
-- Partitioning by date
-- Partitioning by date combined with clustering by 'platform'
+- Partitioning by `ts`
+- Partitioning by `ts` combined with clustering by `platform`
 
 The comparisons focus on bytes processed, bytes billed, execution time, and slot milliseconds.
 
