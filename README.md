@@ -100,9 +100,9 @@ The analysis includes:
 
 [View SQL file](sql/03_advanced_analysis.sql)
 
-#### 4. PostgreSQL Performance Analysis
+#### 4. PostgreSQL Query Optimization
 
-This section focuses on query performance and index usage in PostgreSQL.
+This section focuses on query optimization and index usage in PostgreSQL.
 
 The analysis uses `EXPLAIN ANALYZE` to compare query execution before and after index creation.
 
@@ -115,21 +115,25 @@ The tests cover:
 - Timestamp range searches
 - Sorting with `ORDER BY ... LIMIT`
 
-Indexes are removed between independent tests to ensure that previous indexes do not affect results.
+Indexes are removed between independent tests to ensure that previous indexes do not affect the results.
 
-[View SQL file](sql/04_postgresql_performance.sql)
+[View SQL file](sql/04_postgresql_optimization.sql)
 
 #### 5. BigQuery Query Optimization
 
+This section focuses on query optimization in BigQuery.
 
+The analysis compares query performance before and after applying partitioning and clustering.
 
+The tests cover:
 
+- Partitioning by date
+- Partitioning combined with clustering
+- Comparing query performance
 
+The comparisons focus on bytes processed, bytes billed, execution time, and slot milliseconds.
 
-
-
-
-
+[View SQL file](sql/05_bigquery_optimization.sql)
 
 ### Tools & Technologies
 
@@ -148,6 +152,8 @@ The Spotify listening data is also explored in Power BI.
 
 ### Key Findings
 
+#### SQL Analysis
+
 - The top 20% of artists account for 95.64% of all plays, showing a strong concentration of listening among a small group of artists.
 
 - The Beatles have the highest total listening time at 20,169.74 minutes, followed by The Killers (17,659.28 minutes) and John Mayer (12,086.99 minutes).
@@ -163,6 +169,22 @@ The Spotify listening data is also explored in Power BI.
 - "Ode To The Mets" by The Strokes is the most-played track with 207 plays and 1,123.86 minutes of total listening time.
 
 - Saturday is the most active day with 22,722 plays, while midnight is the most active hour with 10,884 plays.
+
+#### PostgreSQL Query Optimization
+
+- Indexes significantly improved searches by artist, track, and timestamp.
+
+- The biggest improvements were seen in queries combining artist and track, where execution time dropped from around 15 ms to below 0.2 ms.
+
+- The order of columns in a composite index affected query performance, with different orders working better for different searches.
+
+- Some searches did not become faster after adding an index, including LIKE '%...%' and LOWER() searches.
+
+- The ts index significantly improved sorting by listening time, reducing execution time from 51.7 ms to 0.15 ms.
+
+#### BigQuery Query Optimization
+
+
 
 
 
