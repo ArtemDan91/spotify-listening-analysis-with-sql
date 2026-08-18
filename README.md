@@ -187,7 +187,7 @@ The Spotify listening data is also explored in Power BI.
 
 - Adding clustering on `artist_name` further reduced data processed from 284.10 KB to 267.19 KB.
 
-- The small dataset size may explain why partitioning and clustering did not reduce execution time.
+- Partitioning and clustering reduced the amount of data processed, but did not reduce query cost or execution time because the dataset is small.
 
 ### Project Structure
 
